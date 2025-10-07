@@ -1,0 +1,17 @@
+;; contains paths used in the rest of the dotfiles
+;; YOU SHOULD MODIFY THIS FILE, VALUES ARE MINENOT VALID
+
+;; root for Emacs config
+(defconst my-emacs-d "<PATH_TO_YOUR_.emacs.d_DIRECTORY"
+  "Root directory of Emacs configuration.")
+
+;; starting directory for files and eshell
+(defconst my-desktop "<PATH_TO_YOUR_PREFERITE_STARTING_DIRECTORY>"
+  "Default path for Desktop to start in.")
+
+;; wsl path (bash.exe)
+(defconst my-wsl-exe "<PATH_TO_YOUR_wsl.exe_OR_bash.exe_OR_WHATEVER>"
+  "WSL path for shells to start in.")
+
+;;;;;;;;;;;;;;;;;
+(provide 'paths)
