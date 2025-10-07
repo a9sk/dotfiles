@@ -3,12 +3,13 @@
 \#*\#
 \.\#*
 auto-save-list/
+projects
 
 # ignore ELPA (reinstallable, no need to track it i guess)
 elpa/
 
-# ignore eshell history (to ignore all the errors ;))
-eshell/history
+# ignore eshell directory fully
+eshell/
 
 # byte compiled files and other extension
 *.elc
