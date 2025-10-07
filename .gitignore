@@ -1,0 +1,17 @@
+# ignore auto-save and backup files
+*~
+\#*\#
+\.\#*
+auto-save-list/
+
+# ignore ELPA (reinstallable, no need to track it i guess)
+elpa/
+
+# ignore eshell history (to ignore all the errors ;))
+eshell/history
+
+# byte compiled files and other extension
+*.elc
+*.backup
+*.swp
+*.log
