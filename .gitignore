@@ -11,6 +11,9 @@ elpa/
 # ignore eshell directory fully
 eshell/
 
+# ignore my paths
+lisp/paths.el
+
 # byte compiled files and other extension
 *.elc
 *.backup
