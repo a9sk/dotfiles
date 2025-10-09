@@ -13,5 +13,25 @@
 (defconst my-wsl-exe "<PATH_TO_YOUR_wsl.exe_OR_bash.exe_OR_WHATEVER>"
   "WSL path for shells to start in.")
 
+;; msys2 bash path (bash.exe)
+(defconst my-msys2-bash "<PATH_TO_YOUR_msys2_BASH>"
+  "MSYS2 bash path for shell")
+
+;; msys2 binaries in usr bin to add to path
+(defconst my-msys2-usr-bin "<PATH_TO_YOUR_usr/bin>" 
+  "MSYS2 bash path for shell")
+
+;; msys2 binaries in ucrt64 to add to path
+(defconst my-msys2-ucrt-bin "<PATH_TO_YOUR_ucrt64_IN_msys2>"
+  "MSYS2 bash path for shell")
+
+;; gpg path for checking signatures and stuff
+(defconst my-gpg-exe "<PATH_TO_YOUR_gpg_exe>"
+  "GPG executable path for Emacs to use")
+
+;; gpg home directory for storing keys and stuff
+(defconst my-epg-home-directory "<PATH_TO_YOUR_gnupg_dir>"
+  "GPG home directory for Emacs to use")
+
 ;;;;;;;;;;;;;;;;;
 (provide 'paths)
