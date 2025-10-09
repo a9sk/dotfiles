@@ -30,5 +30,27 @@
 ;; on windows, this sets frame border color to #whatever
 ;; (set-face-attribute 'internal-border nil :background "#444444")
 
+;; enable syntax highlighting globally
+(global-font-lock-mode 1)
+
+;; make sure it highlights even in large files
+(setq font-lock-maximum-decoration t)
+
+;; enforce native treesitter modules
+;; (setq treesit-auto-install 'prompt)
+
+;; optional: add support for tree-sitter (modern highlighting)
+;; (use-package treesit-auto
+;;   :ensure t
+;;   :config
+;;   (global-treesit-auto-mode))
+
+;; use markdown preview with command C-x p
+;; (use-package markdown-mode
+;;   :mode ("\\.md\\'" . markdown-mode)
+;;   :init (setq markdown-command "pandoc")
+;;   :bind (:map markdown-mode-command-map
+;;               ("p" . markdown-preview)))
+
 ;;;;;;;;;;;;;
 (provide 'ui)
