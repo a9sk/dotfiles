@@ -6,21 +6,6 @@ auto-save-list/
 projects
 history
 
-# ignore ELPA (reinstallable, no need to track it i guess)
-elpa/
-
-# ignore eshell directory fully
-eshell/
-
-# ignore my paths
-lisp/paths.el
-
-# ignore ltex lsp
-lsp-ltex/
-
-# ignore gnupg keys and trust db
-gnupg/
-
 # byte compiled files and other extension
 *.elc
 *.backup
