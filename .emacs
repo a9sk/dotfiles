@@ -1,5 +1,3 @@
-(delete-selection-mode 1)
-
 ;; main entry, load helpers and modules
 (setq custom-file "~/.emacs.custom.el")   ;; separate custom variables
 (load custom-file t)
@@ -14,6 +12,9 @@
 (load "~/.emacs.rc/packages.el")
 (load "~/.emacs.rc/org-rc.el")
 (load "~/.emacs.rc/misc-rc.el")
+(load "~/.emacs.rc/lang-packages.el")
+;; load go language config
+(load "~/.emacs.rc/lang-go.el")
 
 ;; load custom-file if exists
 (setq custom-file "~/.emacs.custom.el")

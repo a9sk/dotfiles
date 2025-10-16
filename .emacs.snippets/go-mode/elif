@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: elif ... {...}
+# key: elif
+# --
+else if ${1:condition} {
+     // fmt.Println("elif condition")
+     $0
+}

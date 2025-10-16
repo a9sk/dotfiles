@@ -13,6 +13,12 @@
 (require 'use-package)
 (setq use-package-always-ensure t)  ;; auto-install missing packages
 
+;; exec path from shell as sometimes i will start emacs from dmenu (mosto of the time actually)
+(rc/require 'exec-path-from-shell)  ;; ensure it is installed
+(use-package exec-path-from-shell
+  :config
+  (exec-path-from-shell-initialize))
+
 ;;; smex
 ;; smex is a smarter M-x with fuzz search, i find it helpful
 (use-package smex
@@ -41,7 +47,15 @@
 ;;; yasnippet
 ;; just for snippets
 (use-package yasnippet
-  :init (yas-global-mode 1))
+  :init (yas-global-mode 1)
+  (setq yas-snippet-dirs
+        '("~/.emacs.snippets"
+          "~/.emacs.d/snippets"
+          ))
+  :config
+  (yas-global-mode 1))
+  
+ 
 
 ;;; magit
 ;; better git interface (used mainly for diff)
@@ -54,6 +68,9 @@
 (use-package company
   :init (global-company-mode)
   :hook ((tuareg-mode . (lambda () (company-mode 0))))) ;; example disable in tuareg
+(with-eval-after-load 'company
+  (add-to-list 'company-backends 'company-yasnippet))
+
 
 ;;; multiple-cursors
 (use-package multiple-cursors
