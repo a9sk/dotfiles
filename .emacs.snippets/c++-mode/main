@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: int main(argc, argv) { ... }
+# key: main
+# --
+#include <iostream>
+
+int main (${1:int argc, char *argv[]}) {
+    ${2:std::cout << "Hello World!" << endl;}
+    $0
+    return 0;
+}

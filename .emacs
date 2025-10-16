@@ -17,3 +17,5 @@
 (load "~/.emacs.rc/lang-go.el")
 ;; load c language config
 (load "~/.emacs.rc/lang-c.el")
+;; load c++ language config
+(load "~/.emacs.rc/lang-cpp.el")
