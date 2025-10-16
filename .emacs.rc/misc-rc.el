@@ -28,4 +28,6 @@
 		    (indent-for-tab-command))))
 
 ;; bind C-c t to open vterm terminal
-(global-set-key (kbd "C-c t") 'my/open-terminal)
+;; (global-set-key (kbd "C-c t") 'term-toggle)
+
+
