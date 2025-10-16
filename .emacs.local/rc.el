@@ -16,3 +16,9 @@
   (disable-theme 'gruber-darker)
   (load-theme 'gruber-darker t))
 
+;; replace selected text when typing
+(delete-selection-mode 1)
+
+;; enable clipboard and primary
+(setq select-enable-clipboard t)
+(setq select-enable-primary t)
