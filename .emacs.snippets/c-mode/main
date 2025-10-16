@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: int main(argc, argv) { ... }
+# key: main
+# --
+#include <stdio.h>
+
+int main (int argc, char *argv[]) {
+    ${1:printf("Hello World!");}
+    $0
+    return 0;
+}

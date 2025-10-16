@@ -7,3 +7,7 @@
 ;; golang packages
 (rc/require 'go-mode)       ;; major mode for go
 (rc/require 'go-eldoc)      ;; inline documentation
+
+;; c/c++ packages
+(rc/require 'cc-mode)
+(rc/require 'clang-format)

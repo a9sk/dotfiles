@@ -15,7 +15,5 @@
 (load "~/.emacs.rc/lang-packages.el")
 ;; load go language config
 (load "~/.emacs.rc/lang-go.el")
-
-;; load custom-file if exists
-(setq custom-file "~/.emacs.custom.el")
-(load custom-file t)
+;; load c language config
+(load "~/.emacs.rc/lang-c.el")
