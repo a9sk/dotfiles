@@ -69,3 +69,12 @@
 (use-package move-text
   :bind (("M-p" . move-text-up)
          ("M-n" . move-text-down)))
+
+
+;; vterm
+;; better terminal instead of the kitty one used in the rest of the system
+(use-package vterm
+  :ensure t
+  :commands vterm
+  :config
+  (setq vterm-shell shell-file-name))
