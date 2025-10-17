@@ -5,7 +5,7 @@
 #include <iostream>
 
 int main (${1:int argc, char *argv[]}) {
-    ${2:std::cout << "Hello World!" << endl;}
+    ${2:std::cout << "Hello World!" << std::endl;}
     $0
     return 0;
 }
