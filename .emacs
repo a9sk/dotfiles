@@ -2,6 +2,18 @@
 (setq custom-file "~/.emacs.custom.el")   ;; separate custom variables
 (load custom-file t)
 
+;; move bloating backups to fixed place
+;; put all backups (#file# and file~) in one place
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+(setq auto-save-file-name-transforms `((".*" "~/.emacs.d/auto-saves/" t)))
+
+;; create those directories if they don't exist
+(make-directory "~/.emacs.d/backups/" t)
+(make-directory "~/.emacs.d/auto-saves/" t)
+
+;; disable lockfiles (#file#)
+(setq create-lockfiles nil)
+
 ;; load helpers
 (add-to-list 'load-path "~/.emacs.local/")
 (load "~/.emacs.local/rc.el")  ;; defines rc helpers
@@ -19,3 +31,5 @@
 (load "~/.emacs.rc/lang-c.el")
 ;; load c++ language config
 (load "~/.emacs.rc/lang-cpp.el")
+;; load js language config
+(load "~/.emacs.rc/lang-js.el")

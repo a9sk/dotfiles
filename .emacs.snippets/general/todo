@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: comment TODO: ...
+# key: todo
+# --
+`(concat comment-start " TODO: ")`${1:change this todo comment}`(concat comment-end)`

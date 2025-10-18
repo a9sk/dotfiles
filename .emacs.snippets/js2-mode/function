@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: function (...) {...}
+# key: function
+# --
+function ${1:whatever} ($0) {
+	 console.log("called: $1");
+}
+

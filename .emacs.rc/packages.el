@@ -26,13 +26,28 @@
   :bind (("M-x" . smex)
          ("C-c C-c M-x" . execute-extended-command)))
 
-;;; ido - interactive buffer/file selection
+;;; ido
 ;; ido is an interactive buffer/file fuzz selector for C-x C-f
-(use-package ido-completing-read+
+(use-package ido
   :init
   (ido-mode 1)
   (ido-everywhere 1)
-  (ido-ubiquitous-mode 1))
+  (setq ido-enable-flex-matching t ;; fuzzy matching
+        ido-create-new-buffer 'always ;; always allow creating new files/buffers
+        ido-auto-merge-work-directories-length -1 ;; stop jumping dirs
+        ido-use-filename-at-point nil ;; don't guess filenames
+        ido-use-url-at-point nil
+        ido-confirm-unique-completion t))
+
+;; marginalia
+;; extra annotations (like file sizes, docstrings)
+(use-package marginalia
+  :init (marginalia-mode 1))
+
+;; consult
+;; better search tool
+(rc/require 'consult)
+(global-set-key (kbd "C-s") #'consult-line)
 
 ;;; paredit
 ;; paredit is used for lisp structured config editing
@@ -54,8 +69,6 @@
           ))
   :config
   (yas-global-mode 1))
-  
- 
 
 ;;; magit
 ;; better git interface (used mainly for diff)
