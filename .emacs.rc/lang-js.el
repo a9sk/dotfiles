@@ -31,5 +31,3 @@
             (flycheck-mode 1)
             (prettier-js-mode 1)))
 
-;; format on save
-(add-hook 'before-save-hook 'prettier-js)
