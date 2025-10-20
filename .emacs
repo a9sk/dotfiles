@@ -33,3 +33,5 @@
 (load "~/.emacs.rc/lang-cpp.el")
 ;; load js language config
 (load "~/.emacs.rc/lang-js.el")
+;; load v language config
+(load "~/.emacs.rc/lang-v.el")

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fn (...) {...}
+# key: fn
+# --
+fn ${1:whatever} ($2) {
+   ${0:print("called: $1")}
+}

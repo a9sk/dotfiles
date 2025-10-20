@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: main () {...}
+# key: main
+# --
+fn main () {
+   ${1:print("Hello, World")}
+   $0
+}
+
+
