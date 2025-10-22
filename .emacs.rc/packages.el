@@ -46,8 +46,14 @@
 
 ;; consult
 ;; better search tool
-(rc/require 'consult)
-(global-set-key (kbd "C-s") #'consult-line)
+;; (rc/require 'consult)
+;; (global-set-key (kbd "C-s") #'consult-line)
+;; (global-set-key (kbd "C-c g") #'consult-ripgrep)
+
+;; deadgrep
+;; better looking vscode like find in files
+(use-package deadgrep
+  :bind (("C-c g" . deadgrep)))
 
 ;;; paredit
 ;; paredit is used for lisp structured config editing
