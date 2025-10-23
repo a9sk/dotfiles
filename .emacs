@@ -35,3 +35,14 @@
 (load "~/.emacs.rc/lang-js.el")
 ;; load v language config
 (load "~/.emacs.rc/lang-v.el")
+
+
+
+;; load languages which do not need a specific config
+(load "~/.emacs.rc/lang-others.el")
+
+
+(setq major-mode-remap-alist
+      '((js-mode . js-ts-mode)
+        (json-mode . json-ts-mode)
+        (css-mode . css-ts-mode)))
