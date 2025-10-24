@@ -1,0 +1,55 @@
+[global]
+    # follow option should be defaulting to none
+    follow = none
+
+    # origin tells where the popup should be
+    origin = bottom-right
+    # origin = center
+
+    notification_limit = 6
+
+    # progress bar might be cool to integrate with pacman
+    # downloads or stuff like that (TODO)
+    progress_bar = true
+
+    progress_bar_height = 20
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    # make it "round"
+    progress_bar_corner_radius = 10
+    progress_bar_corners = all
+
+    # ON COMPOSITING WINDOW MANAGERS ONLY
+    transparency = 25
+
+    # separate notifications
+    separator_height = 2
+    separator_color = frame
+
+    # get urgent notifications before
+    sort = urgency_descending
+
+    # fonts and stuff like that
+    font = Monospace 14
+    frame_color = "#444444"
+    background = "#222222"
+    foreground = "#ffffff"
+    timeout = 2
+    padding = 8
+    horizontal_padding = 8
+
+[urgency_low]
+    timeout = 2
+
+[urgency_normal]
+    background = "#3a5068"
+    foreground = "#eeeeee"
+    timeout = 3
+
+[urgency_critical]
+    background = "#bf616a"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 10
