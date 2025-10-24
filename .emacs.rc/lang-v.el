@@ -12,4 +12,4 @@
                  (when (eq major-mode 'v-mode)
                    (shell-command (format "v fmt -w %s" (shell-quote-argument buffer-file-name)))
                    (revert-buffer t t t)))
-               nil t))))
+               nil t))

@@ -42,6 +42,7 @@
 (load "~/.emacs.rc/lang-others.el")
 
 
+;; use tree-sitter based modes when available
 (setq major-mode-remap-alist
       '((js-mode . js-ts-mode)
         (json-mode . json-ts-mode)
