@@ -32,7 +32,8 @@
 ;; load c++ language config
 (load "~/.emacs.rc/lang-cpp.el")
 ;; load js language config
-(load "~/.emacs.rc/lang-js.el")
+;; (load "~/.emacs.rc/lang-js.el")
+(load "~/.emacs.rc/lang-js-new.el")
 ;; load v language config
 (load "~/.emacs.rc/lang-v.el")
 
@@ -40,10 +41,3 @@
 
 ;; load languages which do not need a specific config
 (load "~/.emacs.rc/lang-others.el")
-
-
-;; use tree-sitter based modes when available
-(setq major-mode-remap-alist
-      '((js-mode . js-ts-mode)
-        (json-mode . json-ts-mode)
-        (css-mode . css-ts-mode)))

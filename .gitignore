@@ -5,6 +5,7 @@
 auto-save-list/
 projects
 history
+emacs/
 
 # byte compiled files and other extension
 *.elc
