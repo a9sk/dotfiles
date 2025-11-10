@@ -4,7 +4,7 @@
                '(javascript-mode . js-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js-ts-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode)))
-
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js-ts-mode))
 ;; lsp-mode for JS/TS
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
@@ -21,9 +21,16 @@
   :after lsp-mode
   :hook (lsp-mode . lsp-ui-mode)
   :custom
-  (lsp-ui-doc-enable nil)
-  (lsp-ui-sideline-enable t)
-  (lsp-ui-sideline-show-hover nil))
+  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-show-with-cursor nil)
+  (lsp-ui-doc-show-with-mouse t)
+  (lsp-ui-doc-delay 0.2)
+  (lsp-ui-doc-position 'at-point)
+  (lsp-ui-sideline-enable nil)
+  (lsp-ui-sideline-show-hover nil)
+  :bind
+  (:map lsp-mode-map
+        ("C-c d" . lsp-ui-doc-glance))) ;; manual popup
 
 ;; company-mode and flycheck for completion and linting
 (use-package company
@@ -40,10 +47,11 @@
   :hook ((js-ts-mode tsx-ts-mode) . apheleia-mode)
   :config
   (setf (alist-get 'prettier apheleia-formatters)
-        '("prettier" "--stdin-filepath" filepath))
+        '("prettier" "--stdin-filepath" filepath
+          "--print-width" "120"
+		  "--tab-width" "4"))  
   (setf (alist-get 'js-ts-mode apheleia-mode-alist) 'prettier)
   (setf (alist-get 'tsx-ts-mode apheleia-mode-alist) 'prettier))
-
 
 ;; rainbow-delimiters for better bracket visibility
 (use-package rainbow-delimiters
@@ -52,7 +60,10 @@
 (setq treesit-font-lock-level 4)
 
 ;; indentation settings
-(setq-default tab-width 2)
-(setq-default js-indent-level 2)
-(setq-default typescript-indent-level 2)
-(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq-default js-indent-level 4)
+(setq-default typescript-indent-level 4)
+;; (setq-default indent-tabs-mode nil)
+
+(remove-hook 'js-ts-mode-hook 'apheleia-mode)
+(remove-hook 'tsx-ts-mode-hook 'apheleia-mode)

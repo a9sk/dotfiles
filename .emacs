@@ -37,7 +37,9 @@
 ;; load v language config
 (load "~/.emacs.rc/lang-v.el")
 
-
+;; lsp settings
+(setq lsp-enable-indentation nil)
+(setq lsp-enable-on-type-formatting nil)
 
 ;; load languages which do not need a specific config
 (load "~/.emacs.rc/lang-others.el")

@@ -22,3 +22,10 @@
 
 ;; v packages
 (rc/require 'v-mode)       ;;  major mode for vlang
+
+;; docker packages
+(rc/require 'dockerfile-mode)     ;; dockerfile major mode
+(rc/require 'yaml-mode)           ;; yaml major mode (for docker-compose)
+
+;; json packages
+(rc/require 'json-mode)           ;; json major mode

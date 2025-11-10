@@ -131,4 +131,5 @@
   :config
   (setq copilot-idle-delay 0.1)
   (setq copilot-enable-predicates
-        '(lambda () (not (company-tooltip-visible-p)))))
+        '(lambda () (not (company-tooltip-visible-p))))
+  (setq copilot-indent-offset-warning-disable t))
