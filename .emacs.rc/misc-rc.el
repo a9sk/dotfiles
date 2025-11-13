@@ -1,8 +1,13 @@
 ;; misc settings
 
-;; set the default shell to /bin/bash
-(setq shell-file-name "/bin/bash")
-(setq vterm-shell shell-file-name)
+;; choose a sensible default shell across OSes
+(setq shell-file-name (if (fboundp 'rc/system-shell)
+													(rc/system-shell)
+												(or (getenv "SHELL") shell-file-name)))
+
+;; set vterm shell if vterm is present
+(with-eval-after-load 'vterm
+	(setq vterm-shell shell-file-name))
 
 ;; BINDS
 
@@ -27,7 +32,7 @@
 		      (indent-rigidly (region-beginning) (region-end) -4)
 		    (indent-for-tab-command))))
 
-;; bind C-c t to open vterm terminal
-;; (global-set-key (kbd "C-c t") 'term-toggle)
+;; bind C-c t to open vterm terminal (implemented in ~/.emacs.local/my.el)
+;; (global-set-key (kbd "C-c t") #'my/toggle-vterm-bottom)
 
 

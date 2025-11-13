@@ -12,3 +12,6 @@ emacs/
 *.backup
 *.swp
 *.log
+elpa/
+transient/
+smex-items

@@ -14,10 +14,9 @@
 (setq use-package-always-ensure t)  ;; auto-install missing packages
 
 ;; exec path from shell as sometimes i will start emacs from dmenu (mosto of the time actually)
-(rc/require 'exec-path-from-shell)  ;; ensure it is installed
-(use-package exec-path-from-shell
-  :config
-  (exec-path-from-shell-initialize))
+;; (use-package exec-path-from-shell
+;;  :config
+;;  (exec-path-from-shell-initialize))
 
 ;;; smex
 ;; smex is a smarter M-x with fuzz search, i find it helpful
@@ -46,7 +45,6 @@
 
 ;; consult
 ;; better search tool
-;; (rc/require 'consult)
 ;; (global-set-key (kbd "C-s") #'consult-line)
 ;; (global-set-key (kbd "C-c g") #'consult-ripgrep)
 

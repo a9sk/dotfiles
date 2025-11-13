@@ -4,8 +4,5 @@
 ;; c++ setup
 (add-hook 'c++-mode-hook
 	  (lambda ()
-	    (lsp)
-	    (company-mode 1)
-	    (flycheck-mode 1)
-	    (yas-minor-mode 1)
-	    (add-hook 'before-save-hook #'clang-format-buffer nil t)))
+	    (when (fboundp 'rc/prog-base-setup) (rc/prog-base-setup))
+	    (rc/add-before-save #'clang-format-buffer)))

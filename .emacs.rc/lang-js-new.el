@@ -2,14 +2,14 @@
 (when (treesit-available-p)
   (add-to-list 'major-mode-remap-alist
                '(javascript-mode . js-ts-mode))
-  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js-ts-mode))
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode)))
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode)))
 ;; lsp-mode for JS/TS
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :hook ((js-ts-mode . lsp-deferred)
-         (tsx-ts-mode . lsp-deferred))
+    (tsx-ts-mode . lsp-deferred))
   :custom
   (lsp-enable-snippet nil)
   (lsp-enable-symbol-highlighting t)
@@ -49,7 +49,7 @@
   (setf (alist-get 'prettier apheleia-formatters)
         '("prettier" "--stdin-filepath" filepath
           "--print-width" "120"
-		  "--tab-width" "4"))  
+          "--tab-width" "4"))
   (setf (alist-get 'js-ts-mode apheleia-mode-alist) 'prettier)
   (setf (alist-get 'tsx-ts-mode apheleia-mode-alist) 'prettier))
 
@@ -65,5 +65,4 @@
 (setq-default typescript-indent-level 4)
 ;; (setq-default indent-tabs-mode nil)
 
-(remove-hook 'js-ts-mode-hook 'apheleia-mode)
-(remove-hook 'tsx-ts-mode-hook 'apheleia-mode)
+;; apheleia-mode is intentionally enabled for js/tsx via hooks above
