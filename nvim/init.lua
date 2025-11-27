@@ -2,5 +2,4 @@ require("config.options")
 require("config.keybinds")
 require("config.lazy")
 
-
-print("my personal config")
+print("emi's nvim is ready!")
