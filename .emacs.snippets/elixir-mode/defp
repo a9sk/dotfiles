@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: defp (...) do ... end
+# key: defp
+# --
+defp ${1:function_name}(${2:args}) do
+	 $0
+end

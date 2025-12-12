@@ -11,6 +11,9 @@
 (use-package cc-mode)
 (use-package clang-format)
 
+;; elixir
+(use-package elixir-mode)
+
 ;; Note:
 ;; - JS/TS use tree-sitter modes configured in lang-js-new.el
 ;; - Docker/YAML/JSON/Rust/TOML packages are configured in lang-others.el

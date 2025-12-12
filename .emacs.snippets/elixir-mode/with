@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: with ... do ... end
+# key: with
+# --
+with ${1:pattern} <- ${2:expr} do
+	$0
+end

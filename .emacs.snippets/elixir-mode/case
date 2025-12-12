@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: case ... do ... end
+# key: case
+# --
+case ${1:expr} do
+	${2:pattern} -> $0
+end
