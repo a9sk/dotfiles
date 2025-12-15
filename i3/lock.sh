@@ -18,3 +18,5 @@ i3lock \
   --indicator \
   --radius=120 \
   --blur 5
+
+systemctl suspend

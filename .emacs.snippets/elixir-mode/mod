@@ -3,7 +3,7 @@
 # key: mod
 # --
 defmodule ${1:ModuleName} do
-	@moduledoc "${1:ModuleName} documentation."
+	@moduledoc "${1} documentation."
 		  
 	$0
 end

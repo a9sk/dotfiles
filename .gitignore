@@ -15,3 +15,5 @@ emacs/
 elpa/
 transient/
 smex-items
+boomer/
+themes/

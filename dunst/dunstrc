@@ -3,7 +3,7 @@
     follow = none
 
     # origin tells where the popup should be
-    origin = bottom-right
+    origin = top-right
     # origin = center
 
     notification_limit = 6

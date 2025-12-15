@@ -3,9 +3,10 @@
   :ensure t
   :mode ("Dockerfile\\'" . dockerfile-mode))
 
-(use-package yaml-mode
-  :ensure t
-  :mode ("docker-compose[^/]*\\.ya?ml\\'" . yaml-mode))
+(use-package yaml-ts-mode
+  :mode ("\\.ya?ml\\'" . yaml-ts-mode)
+  :hook (yaml-ts-mode . lsp)
+  :init (setq treesit-font-lock-level 4))
 
 ;; Rust language config
 (use-package rust-mode

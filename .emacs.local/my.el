@@ -1,4 +1,3 @@
-
 (defvar my/vterm-buffer-name "*vterm*"
   "Name of the vterm buffer used for toggle.")
 
@@ -30,3 +29,14 @@ Safely handles missing vterm (e.g., on unsupported platforms)."
         (select-window bottom-window)))))
 
 (global-set-key (kbd "C-c t") #'my/toggle-vterm-bottom)
+
+(defun my/yaml-colors ()
+  "Custom colors for YAML only."
+  (face-remap-add-relative 'treesit-face-keyword   '(:foreground "#ffb964")) ;; keys: orange
+  (face-remap-add-relative 'treesit-face-field     '(:foreground "#ffb964")) ;; ts field == key
+  (face-remap-add-relative 'treesit-face-property  '(:foreground "#ffb964"))
+  (face-remap-add-relative 'treesit-face-string    '(:foreground "#85c54c")) ;; values: green
+  (face-remap-add-relative 'treesit-face-number    '(:foreground "#e4a0f2")) ;; numbers: magenta
+  (face-remap-add-relative 'treesit-face-constant  '(:foreground "#6fcbdc"))) ;; true/false/null
+
+(add-hook 'yaml-ts-mode-hook #'my/yaml-colors)

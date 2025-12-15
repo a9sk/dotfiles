@@ -15,8 +15,11 @@
 ;; (yes, they are different)
 ;; note: this is only useful on my italian keyboard which does not have the
 ;;       character built in.
-(define-key global-map (kbd "C-c '")
-	    (lambda () (interactive) (insert "`")))
+;; (define-key global-map (kbd "C-c '")
+;;	    (lambda () (interactive) (insert "`")))
+(global-set-key	(kbd "C-c '") (lambda () (interactive) (insert "`")))
+
+(global-set-key (kbd "C-c C-k") #'comment-line)
 
 ;; bind C-arrowleft and C-arrowright to move of a full word
 ;; this was overwritten by paredit in paredit-mode
