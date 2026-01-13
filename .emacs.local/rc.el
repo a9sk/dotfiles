@@ -16,7 +16,7 @@
   (interactive)
   (when (custom-theme-enabled-p 'gruber-darker)
     (disable-theme 'gruber-darker))
-  (load-theme 'gruber-darker t))
+  (load-theme 'amaranth-dark t))
 
 ;; replace selected text when typing
 (delete-selection-mode 1)

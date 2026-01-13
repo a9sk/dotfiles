@@ -116,18 +116,18 @@
 
 ;; copilot
 ;; for inline ghost lines suggestions
-(use-package copilot
-  :vc (:url "https://github.com/copilot-emacs/copilot.el"
-            :branch "main"
-            :rev :newest)
-  :hook (prog-mode . copilot-mode)
-  :bind (:map copilot-completion-map
-              ("<tab>" . copilot-accept-completion)
-              ("TAB"   . copilot-accept-completion)
-              ("C-<tab>" . copilot-accept-completion-by-word)
-              ("C-S-<tab>" . copilot-next-completion))
-  :config
-  (setq copilot-idle-delay 0.1)
-  (setq copilot-enable-predicates
-        '(lambda () (not (company-tooltip-visible-p))))
-  (setq copilot-indent-offset-warning-disable t))
+;; (use-package copilot
+;;   :vc (:url "https://github.com/copilot-emacs/copilot.el"
+;;             :branch "main"
+;;             :rev :newest)
+;;   :hook (prog-mode . copilot-mode)
+;;   :bind (:map copilot-completion-map
+;;               ("<tab>" . copilot-accept-completion)
+;;               ("TAB"   . copilot-accept-completion)
+;;               ("C-<tab>" . copilot-accept-completion-by-word)
+;;               ("C-S-<tab>" . copilot-next-completion))
+;;   :config
+;;   (setq copilot-idle-delay 0.1)
+;;   (setq copilot-enable-predicates
+;;         '(lambda () (not (company-tooltip-visible-p))))
+;;   (setq copilot-indent-offset-warning-disable t))

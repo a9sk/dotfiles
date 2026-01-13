@@ -24,7 +24,8 @@
     (prettier-js-mode 1)
     (tide-setup)
     (tide-hl-identifier-mode 1)
-    (copilot-mode 1)))
+    ;; (copilot-mode 1)
+	))
 
 
 (add-hook 'web-mode-hook

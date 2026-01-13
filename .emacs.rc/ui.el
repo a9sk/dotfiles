@@ -20,5 +20,9 @@
       (rc/default-font))
 
 ;; load theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/gruber-darker-emacs")
-(load-theme 'gruber-darker t)
+;; "~/dotfiles/themes/amaranth-dark-theme"
+(add-to-list 'custom-theme-load-path "~/dotfiles/themes/amaranth-dark-theme")
+(load-theme 'amaranth-dark t)
+;; (add-to-list 'custom-theme-load-path "~/dotfiles/themes/gruber-darker-theme")
+;; (load-theme 'gruber-darker t)
+

@@ -38,4 +38,8 @@
 ;; bind C-c t to open vterm terminal (implemented in ~/.emacs.local/my.el)
 ;; (global-set-key (kbd "C-c t") #'my/toggle-vterm-bottom)
 
+;; bind F5 to compile
+(global-set-key (kbd "<f5>") 'compile)
 
+;; always answer y/n instead of yes/no
+(fset 'yes-or-no-p 'y-or-n-p)
