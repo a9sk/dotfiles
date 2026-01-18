@@ -225,3 +225,6 @@ bindsym $mod+Shift+l exec --no-startup-id sh -c '~/.config/i3/lock.sh' #  && sys
 
 # toggle boomer
 bindsym $mod+z exec --no-startup-id boomer
+
+# use qr-scan
+bindsym $mod+Shift+s exec qr-scan
