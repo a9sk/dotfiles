@@ -26,9 +26,11 @@
 (setq select-enable-primary t)
 
 ;; Common programming setup used by language hooks
-(defun rc/prog-base-setup ()
-  "Enable common minor modes for programming buffers."
-  (when (fboundp 'lsp-deferred) (lsp-deferred))
+(defun rc/prog-base-setup (&optional skip-lsp)
+  "Enable common minor modes for programming buffers.
+If SKIP-LSP is non-nil, do not start lsp."
+  (unless skip-lsp
+    (when (fboundp 'lsp-deferred) (lsp-deferred)))
   (when (fboundp 'company-mode) (company-mode 1))
   (when (fboundp 'flycheck-mode) (flycheck-mode 1))
   (when (fboundp 'yas-minor-mode) (yas-minor-mode 1)))
