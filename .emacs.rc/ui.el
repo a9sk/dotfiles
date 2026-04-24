@@ -13,7 +13,7 @@
 (defun rc/default-font ()
   (cond
    ((eq system-type 'windows-nt) "Consolas-13")
-   ((eq system-type 'gnu/linux) "Iosevka Nerd Font-20")
+   ;; ((eq system-type 'gnu/linux) "Iosevka Nerd Font-20")
    (t "Monospace-20")))
 
 (setf (alist-get 'font default-frame-alist)
