@@ -14,6 +14,9 @@
 ;; elixir
 (use-package elixir-mode)
 
+;; sml
+(use-package sml-mode)
+
 ;; Note:
 ;; - JS/TS use tree-sitter modes configured in lang-js-new.el
 ;; - Docker/YAML/JSON/Rust/TOML packages are configured in lang-others.el
