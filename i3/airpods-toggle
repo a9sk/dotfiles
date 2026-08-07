@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MAC="REDACTED EVEN IF PUBLIC"
+
+if bluetoothctl info "$MAC" | grep -q "Connected: yes"; then
+    bluetoothctl disconnect "$MAC"
+    notify-send "AirPods" "Disconnected" -i bluetooth-disabled-symbolic
+else
+    notify-send "AirPods" "Connecting..." -i bluetooth-active-symbolic
+    bluetoothctl connect "$MAC"
+fi

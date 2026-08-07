@@ -212,7 +212,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # bindsym XF86AudioMute exec --no-startup-id sh -c 'pamixer --toggle-mute; notify-send "Volume Muted"
 
 # Use feh to insert a background
-exec --no-startup-id feh --bg-scale ~/Pictures/macBackground.png
+# exec --no-startup-id feh --bg-scale ~/Pictures/macBackground.png
 
 # disable x11 bell globally
 exec --no-startup-id xset b off
@@ -238,3 +238,6 @@ exec --no-startup-id env XDG_SESSION_TYPE=x11 gnome-keyring-daemon --start --com
 
 # screenshots
 bindsym $mod+Shift+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%F-%T).png
+
+# connect to airpods (hardcoded mac)
+bindsym $mod+Shift+b exec --no-startup-id ~/.config/i3/airpods-toggle
