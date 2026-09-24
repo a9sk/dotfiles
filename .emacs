@@ -41,5 +41,9 @@
 (setq lsp-enable-indentation nil)
 (setq lsp-enable-on-type-formatting nil)
 
+;; quick fix for md code blocks
+;; TODO: pick different font and fix dimentions
+;; (custom-set-faces '(markdown-code-face ((t (:family "Menlo" :height 100 :inherit default)))))
+
 ;; load languages which do not need a specific config
 (load "~/.emacs.rc/lang-others.el")

@@ -53,16 +53,6 @@
 (use-package deadgrep
   :bind (("C-c g" . deadgrep)))
 
-;;; paredit
-;; paredit is used for lisp structured config editing
-(use-package paredit
-  :hook ((emacs-lisp-mode
-          clojure-mode
-          lisp-mode
-          common-lisp-mode
-          scheme-mode
-          racket-mode) . paredit-mode))
-
 ;;; yasnippet
 ;; just for snippets
 (use-package yasnippet
@@ -80,15 +70,6 @@
   :bind (("C-c m s" . magit-status)
          ("C-c m l" . magit-log)))
 
-;;; company
-;; auto completion package
-(use-package company
-  :init (global-company-mode)
-  :hook ((tuareg-mode . (lambda () (company-mode 0))))) ;; example disable in tuareg
-(with-eval-after-load 'company
-  (add-to-list 'company-backends 'company-yasnippet))
-
-
 ;;; multiple-cursors
 (use-package multiple-cursors
   :bind (("C-S-c C-S-c" . mc/edit-lines)
@@ -104,7 +85,6 @@
   :bind (("M-p" . move-text-up)
          ("M-n" . move-text-down)))
 
-
 ;; vterm
 ;; better terminal instead of the kitty one used in the rest of the system
 (use-package vterm
@@ -112,7 +92,6 @@
   :commands vterm
   :config
   (setq vterm-shell shell-file-name))
-
 
 ;; copilot
 ;; for inline ghost lines suggestions
@@ -131,3 +110,13 @@
 ;;   (setq copilot-enable-predicates
 ;;         '(lambda () (not (company-tooltip-visible-p))))
 ;;   (setq copilot-indent-offset-warning-disable t))
+
+;; ox-reveal presentation stuff
+(use-package ox-reveal
+  :ensure t
+  :config
+  ;; unsafe but who cares right???... right???
+  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
+
+(use-package htmlize
+  :ensure t)
