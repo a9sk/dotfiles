@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: defmodule ... do ... end
-# key: mod
-# --
-defmodule ${1:ModuleName} do
-	@moduledoc "${1} documentation."
-		  
-	$0
-end

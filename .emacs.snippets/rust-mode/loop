@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: loop {...}
-# key: loop
-# --
-loop {
-  ${1:"break;"}
-  $0
-};
