@@ -19,4 +19,7 @@ boomer/
 themes/
 
 # other
-i3/airpods-toggle
+i3/airpos-toggle
+i3/lock.sh
+opencode/
+scripts/
